@@ -16,4 +16,4 @@ description = "Il sito ufficiale di Spaghetti Tattoo Shop"
 highlight_code = false
 
 [extra]
-# Put all your custom variables here
+instagram_url = "https://www.instagram.com/spaghettitattooshop/"
