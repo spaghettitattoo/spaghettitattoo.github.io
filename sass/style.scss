@@ -1,5 +1,25 @@
 @import "reset";
-@import "variables";
+
+$serifFont: 'Bree Serif', serif;
+
+:root {
+    --color-dark-gray: #383838;
+    --color-red: #b9144d;
+    --base-font-size: 18px;
+    --base-line-height: 1;
+}
+
+@mixin mediumScreen {
+  @media screen and (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin wideScreen {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
 
 html {
   font-size: 100%;
@@ -7,8 +27,12 @@ html {
 }
 
 body {
-  font: 21px/2 $serifFont;
+  font: var(--base-font-size)/var(--base-line-height) $serifFont;
   height: 100%;
+
+  @include mediumScreen() {
+    --base-line-height: 2;
+  }
 }
 
 h1,
@@ -17,7 +41,6 @@ h3,
 h4,
 h5,
 h6 {
-//   font-family: $helveticaNeue;
   font-weight: bold;
 
   line-height: 1.7;
@@ -113,16 +136,28 @@ b {
 
 header {
   flex-basis: 10%;
+  min-height: 4rem;
 
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 1rem 1rem;
 
-  padding-top: 2rem;
+  margin-top: 1rem;
+  padding: 0 2rem 0 2rem;
 
   a.social-icon {
-    width: 4rem;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: 50%;
+    }
   }
 }
 
@@ -130,6 +165,7 @@ header {
 
 h1 {
   width: 50%;
+  max-width: 30rem;
   margin: 0 auto;
 }
 
@@ -157,27 +193,38 @@ main {
 // Footer
 
 footer {
+  padding: 0 1rem 0.5rem 1rem;
   background-color: var(--color-dark-gray);
   flex-basis: 15%;
 
   color: white;
+  font-size: 1rem;
+  text-align: center;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   column-gap: 5rem;
 
-  padding: 0 3rem;
+  @include mediumScreen() {
+    flex-direction: row;
+    padding: 0 3rem;
+    text-align: left;
+  }
 
   section {
     flex: auto;
-    padding: 2rem;
+    padding: 1rem;
+
+    @include mediumScreen() {
+      padding: 2rem;
+    }
   }
 
   .footer-title {
     text-transform: uppercase;
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   #opening-hours .closed {
@@ -189,14 +236,42 @@ footer {
     flex-direction: column;
     gap: 1rem 1rem;
 
+    justify-items: center;
+
+    @include mediumScreen() {
+      justify-items: flex-start;
+    }
+
     .icons-container {
       display: flex;
       flex-direction: row;
-      gap: 0 3rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 2rem;
+      column-gap: 1rem;
+
+      @include mediumScreen() {
+        justify-content: flex-start;
+      }
+
+      a {
+        // flex: 1;
+        display: block;
+        height: 100%;
+        min-height: 100%;
+        // min-width: 100%;
+
+        img {
+          height: 100%;
+          min-height: 100%;
+          min-width: 100%;
+        }
+      }
     }
 
     img {
-      filter: invert(1);
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(276deg) brightness(105%) contrast(104%);
     }
   }
 }
