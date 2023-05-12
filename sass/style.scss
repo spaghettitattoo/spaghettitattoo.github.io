@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font: 18px/1.4 $serifFont;
+  font: 21px/2 $serifFont;
   height: 100%;
 }
 
@@ -112,10 +112,12 @@ b {
 // Header
 
 header {
+  flex-basis: 10%;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  flex-basis: 10%;
+  gap: 1rem 1rem;
 
   padding-top: 2rem;
 
@@ -128,6 +130,23 @@ header {
 
 main {
   flex-basis: 100%;
+
+  h2 {
+    text-transform: uppercase;
+    color: var(--color-red);
+    font-size: 2.7rem;
+  }
+
+  #hero-text {
+    background-color: var(--color-dark-gray);
+    color: white;
+  }
+
+  #our-work {
+    h2 {
+      text-align: center;
+    }
+  }
 }
 
 // Footer
