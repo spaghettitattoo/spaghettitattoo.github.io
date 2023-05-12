@@ -40,27 +40,17 @@
 
 <body>
     <div id="main-container">
-        <header>
-            <a class="social-icon" href="{{ config.extra.instagram_url }}" target="_blank">
-                <img src="{{ get_url(path="assets/icons/instagram.svg") }}" alt="Instagram" />
-            </a>
-            <a class="social-icon" href="TODO: facebook" target="_blank">
-                <img src="{{ get_url(path="assets/icons/facebook.svg") }}" alt="Facebook" />
-            </a>
-        </header>
-
         <main>
             <h1>
                 <img class="block mx-auto" src="/assets/logo.svg" alt="Spaghetti Tattoo" />
             </h1>
-
-            <section id="hero-text">
-                <h2>Tatuaggi di qualità fatti da professionisti</h2>
-                <p>Lorem ipsum</p>
-            </section>
-
-            <section id="our-work">
-                <h2>I Nostri Lavori</h2>
+            <section class="socials">
+                <a class="social-icon" href="{{ config.extra.instagram_url }}" target="_blank">
+                    <img src="{{ get_url(path="assets/icons/instagram.svg") }}" alt="Instagram" />
+                </a>
+                <a class="social-icon" href="{{ config.extra.facebook_url }}" target="_blank">
+                    <img src="{{ get_url(path="assets/icons/facebook.svg") }}" alt="Facebook" />
+                </a>
             </section>
         </main>
 
@@ -79,18 +69,6 @@
                 <p><a href="tel:+39 333 461 6489">+39 333 461 6489</a></p>
                 <p><a href="mailto:info@spaghettitattoo.com">info@spaghettitattoo.com</a></p>
                 <p><a href="{{ config.extra.google_maps_url }}">Via Cavour 26, L'Aquila</a></p>
-            </section>
-
-            <section id="follow-us-on">
-                <span class="footer-title">Seguici su</span>
-                <div class="icons-container">
-                    <a href="{{ config.extra.instagram_url }}" target="_blank">
-                        <img src="{{ get_url(path="assets/icons/instagram.svg") }}" alt="Instagram" />
-                    </a>
-                    <a href="{{ config.extra.facebook_url }}" target="_blank">
-                        <img src="{{ get_url(path="assets/icons/facebook.svg") }}" alt="Facebook" />
-                    </a>
-                </div>
             </section>
         </footer>
     </div>

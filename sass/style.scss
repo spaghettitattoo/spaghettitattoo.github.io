@@ -132,35 +132,6 @@ b {
   height: 100%;
 }
 
-// Header
-
-header {
-  flex-basis: 10%;
-  min-height: 4rem;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 1rem 1rem;
-
-  margin-top: 1rem;
-  padding: 0 2rem 0 2rem;
-
-  a.social-icon {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-
-    img {
-      display: block;
-      max-width: 100%;
-      max-height: 100%;
-      height: 50%;
-    }
-  }
-}
-
 // Main section
 
 h1 {
@@ -171,6 +142,7 @@ h1 {
 
 main {
   flex-basis: 100%;
+  padding-top: 5rem;
 
   h2 {
     text-transform: uppercase;
@@ -178,14 +150,30 @@ main {
     font-size: 2.7rem;
   }
 
-  #hero-text {
-    background-color: var(--color-dark-gray);
-    color: white;
-  }
+  .socials {
+    min-height: 4rem;
+    height: 4rem;
 
-  #our-work {
-    h2 {
-      text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem 1rem;
+
+    margin-top: 1rem;
+    padding: 0 2rem 0 2rem;
+
+    a.social-icon {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: 100%;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        height: 50%;
+      }
     }
   }
 }
@@ -256,11 +244,9 @@ footer {
       }
 
       a {
-        // flex: 1;
         display: block;
         height: 100%;
         min-height: 100%;
-        // min-width: 100%;
 
         img {
           height: 100%;
